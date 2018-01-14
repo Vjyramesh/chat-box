@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Q</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        MESSAGES
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        DOWNLOAD
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 col-xs-12">
+                <div class="row message-user-column align-items-start">
+                    <ul class="w-100  h-100">
+                        <input type="text" class="ml-2 mb-3 mt-3 form-control search-user-field w-70 d-inline-block" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+                        <button class="btn btn-outline-secondary sorting-button"><span class="oi oi-sort-descending"></span></button>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-8 col-xs-12">
+                <div class="message-area py-4 px-2">
+
+                </div>
+                <form>
+                <div class="input-group message-type fixed-bottom">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button"><span class="oi oi-paperclip"></span></button>
+                    </div>
+                    <input type="text" class="form-control message-input" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary send-button" type="submit">SEND</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

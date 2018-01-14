@@ -1,0 +1,153 @@
+body {
+    background-color: #f8f9fa!important;
+}
+.navbar-light .navbar-brand{
+    color: #2196F3;
+    font-weight: bold;
+    font-size: 28px;
+}
+.bg-light{
+    background-color: #fff !important;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.35);
+    font-weight: bold;
+}
+
+.message-user-column{
+    background: #fff;
+    min-height: calc(100vh - 70px);
+}
+.message-user-column > ul {
+    padding: 0;
+    list-style: none;
+
+}
+.message-user-column li:first-of-type{
+    border-top: 1px solid #ccc;
+}
+.message-user-column li:not(:last-of-type){
+    border-bottom: 1px solid #ccc;
+}
+.message-user-column a{
+    text-decoration: none;
+}
+.message-user-column .user-image{
+    width: 40px;
+    height: 40px;
+}
+.user-image{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    object-position: center;
+    margin-right: 10px;
+}
+.user-details *{
+    color: #000;
+    font-size: 0.65rem;
+    
+}
+.user-details p:nth-of-type(1){
+    font-size: 1rem;
+    font-weight: 500;
+}
+.user-details span.time{
+    top: 5px;
+    right: 5px;
+    color: #a7a7a7;
+}
+.form-control:focus{
+    border: 1px solid #ccc;;
+    box-shadow: none;
+}
+.message-user-column li{
+    transition: 0.5s ease all;
+}
+.message-user-column li.active-user {
+    background: #1E88E5;
+    color: #fff;
+    transform: scaleX(1.02) translateX(3px);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transition: 0.5s ease all;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3)
+}
+
+.active-user .user-details *{
+    color: #fff !important;
+}
+.no-conversation{
+    color: #ccc;
+    font-size: 20px;
+    text-align: center;
+}
+.search-user-field{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.27);
+    border-radius: 0px;
+    width: 80%;
+}
+.message-area{
+    font-size: 12px;
+}
+.message-div:before {
+    content: "";
+    position: absolute;
+    border: 7px solid transparent;
+    bottom: 0;
+}
+.my-message .message-div:before{
+    border-right: 7px solid #d9d9d9;
+    border-bottom: 3px solid #d9d9d9;
+    left: -12px;
+    transform: rotate(-10deg);
+}
+.recieved-message .message-div:before{
+    border-left: 7px solid #d9d9d9;
+    border-bottom: 3px solid #d9d9d9;
+    right: -12px;
+    transform: rotate(10deg);
+}
+.message-div {
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 500;
+    
+}
+.my-message .message-div{
+    background: #d9d9d9;
+    border-bottom-left-radius: 0px;
+}
+
+.recieved-message .message-div {
+    background: #d9d9d9;
+    border-bottom-right-radius: 0px;
+    margin-right: 10px;
+}
+.message-type{
+    left: 33.333%;
+    width: 66.666%;
+    border-top: 1px solid #ccc;
+    height: 56px;
+}
+.message-type button {
+    border: none;
+    background: transparent !important;
+    color: #1e88e5 !important;
+    font-weight: bold;
+    box-shadow: none !important;
+}
+.message-type input{
+    border: none !important;
+    background: transparent !important;
+}
+.message-user-column .btn{
+    width: 15%;
+    border: none;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.27);
+    border-radius: 0px;
+    margin-top: -5px;
+}
