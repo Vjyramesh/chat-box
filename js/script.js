@@ -144,17 +144,18 @@ var userList, userListModule = {
     },
     displayUserMessage: function (user = 0) {
         let html = "";
-        let messageList =0
+        let messageList1 =[];
         $.each(userData, (index, value) => {
+            messageList1 = value['messages'];
             if (index === user) {
                 let localMessage = JSON.parse(localStorage.getItem('messageList'));
                 $.each(localMessage, function (localIndex, localValue) {
                     if (user == localValue.createdBy) {
-                        localStorage.getItem('messageList') && value['messages'].push(localValue);
+                        messageList1.push(localValue);
                     }
-                })
+                });
             }
-            index === user && $.each(value['messages'], (index1, value1) => {
+            index === user && $.each(messageList1, (index1, value1) => {
                 let dateToShow = '';
                 if (value['messages'].length) {
                     let fullDate = new Date(value['messages'][value['messages'].length - 1].created);
@@ -196,11 +197,12 @@ var messageInsert, messageInsertModule = {
     },
     sendMessage: function (e) {
         var html = '';
+        var date = new Date()
         if ($.trim($('.message-input').val()).length != 0) {
             var message = {
                 "id": 0,
                 "text": $('.message-input').val(),
-                "created": "Fri, 14 Jul 2017 09:56:37 GMT",
+                "created": date.toUTCString() ,
                 "createdBy": $('.user-list.active-user').attr('data-index')
             };
             var messageList;
@@ -209,10 +211,11 @@ var messageInsert, messageInsertModule = {
                 messageList = [];
             }
             messageList.push(message);
+            $(".no-conversation").remove();
             localStorage.setItem('messageList', JSON.stringify(messageList));
             var image = $('.user-list.active-user').find('.user-image').attr('src');
             html = `<div class="recieved-message text-right">
-                    <div class="d-inline-block"><div class="message-div position-relative">${$('.message-input').val()}</div><span>dsfasdf</span></div>
+                    <div class="d-inline-block"><div class="message-div position-relative">${$('.message-input').val()}</div><span>now</span></div>
                     <img src="${image}" class="rounded-circle user-image align-baseline" />
                 </div>`;
             $('.message-area').append(html);
