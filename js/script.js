@@ -85,7 +85,7 @@ var userList, userListModule = {
     },
     getValues: function () {
         $.ajax({
-            url: 'data.json',
+            url: 'js/data.json',
             type: 'get',
             dataType: 'json',
             statusCode: {
