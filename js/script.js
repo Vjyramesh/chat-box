@@ -85,7 +85,7 @@ var userList, userListModule = {
     },
     getValues: function () {
         $.ajax({
-            url: 'http://demo4842709.mockable.io/users',
+            url: 'data.json',
             type: 'get',
             dataType: 'json',
             statusCode: {
